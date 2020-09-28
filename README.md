@@ -17,6 +17,7 @@ open passData.xcodeproj
 
 ## Protocols and Delegates
 
+### PizzaDelegate.swift
 I create the protocol `PizzaDelegate`
 
 ```swift
@@ -31,6 +32,7 @@ In this Example:
 From `MainViewController.swift`
 to `WineView.swift`
 
+### MainViewController.swift
 so in the class `MainViewController`
 I apply the protocol to the class, and send the delegate to the `WineViewController`.
 
@@ -48,6 +50,7 @@ class MainViewController: UIViewController, PizzaDelegate {
 
 ```
 
+### WineViewController.swift
 In the `WineViewController`, I declare the delegate and send to the WineView
 
 ```swift
@@ -62,6 +65,7 @@ var pizzaDelegate: PizzaDelegate?
     }
 ```
 
+### WineView.swift
 In the `WineView` class, I declare the delegate and use the delegate
 
 ```swift
