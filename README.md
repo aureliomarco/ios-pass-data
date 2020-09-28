@@ -19,7 +19,7 @@ open passData.xcodeproj
 
 I create the protocol `PizzaDelegate`
 
-````swift
+```swift
 protocol PizzaDelegate {
     func onPizzaReady(type: String) -> String
 }
