@@ -1,4 +1,5 @@
 # How to pass data in iOS Project
+This repository has examples of how to pass data between ViewControllers in iOS Projects.
 
 ### Setup
 - IDE: `Xcode 11.1` (Version of the Xcode where the project was builded)
