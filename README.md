@@ -18,6 +18,10 @@ open passData.xcodeproj
 
 ## Protocols and Delegates
 
+<p align="left">
+  <img width="700" height="441" src="assets/protocols.png">
+</p>
+
 ### PizzaDelegate.swift
 I create the protocol `PizzaDelegate`
 
@@ -58,12 +62,12 @@ In the `WineViewController`, I declare the delegate and send to the WineView
 var pizzaDelegate: PizzaDelegate?
 ```
 ```swift
-    private func setupUI() {
-        wineView = WineView(frame: view.frame)
-        view = wineView
-        
-        wineView?.pizzaDelegate = pizzaDelegate
-    }
+private func setupUI() {
+    wineView = WineView(frame: view.frame)
+    view = wineView
+    
+    wineView?.pizzaDelegate = pizzaDelegate
+}
 ```
 
 ### WineView.swift
@@ -74,8 +78,8 @@ var pizzaDelegate: PizzaDelegate?
 ```
 
 ```swift
-    @objc func updateOrder() {
-        let statusOrder = pizzaDelegate?.onPizzaReady(type: pizzaTextField.text ?? "") ?? ""
-        statusOrderMessage.text = "Order Status: \(statusOrder)"
-    }
+@objc func updateOrder() {
+    let statusOrder = pizzaDelegate?.onPizzaReady(type: pizzaTextField.text ?? "") ?? ""
+    statusOrderMessage.text = "Order Status: \(statusOrder)"
+}
 ```
